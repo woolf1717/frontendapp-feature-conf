@@ -1,0 +1,34 @@
+description: Show pagination
+tags:
+  - all
+
+bucketBy: userId
+
+environments:
+  preview:
+    rules:
+      - key: "1"
+        segments: "*"
+        percentage: 100
+
+  development:
+    rules:
+      - key: "1"
+        segments: "*"
+        percentage: 100
+
+  staging:
+    rules:
+      - key: "1"
+        segments: -poland
+        percentage: 100
+
+      - key: "1"
+        segments: "*"
+        percentage: 0
+
+  production:
+    rules:
+      - key: "1"
+        segments: "*" # everyone else
+        percentage: 0

@@ -1,5 +1,5 @@
-description: The Netherlands
+description: The Polanf
 conditions:
   - attribute: country
     operator: equals
-    value: nl
+    value: pl
